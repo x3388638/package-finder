@@ -1,0 +1,40 @@
+{
+  "name": "package-finder",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "prettier:check": "prettier --check './**/*.{html,js,svelte,css}'",
+    "prettier:write": "prettier --write './**/*.{html,js,svelte,css}'",
+    "lint": "eslint './**/*.{js,svelte}'",
+    "lint:fix": "eslint --fix './**/*.{js,svelte}'"
+  },
+  "author": "YY",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^7.6.0",
+    "eslint-plugin-svelte3": "^2.7.3",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
+    "prettier": "^2.0.5",
+    "prettier-plugin-svelte": "^1.1.0",
+    "svelte": "^3.24.0",
+    "svelte-loader": "^2.13.6",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{html,css,js,svelte}": [
+      "npm run prettier:check"
+    ],
+    "*.{js,svelte}": [
+      "npm run lint"
+    ]
+  }
+}
