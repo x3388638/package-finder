@@ -1,10 +1,10 @@
 {
   "name": "package-finder",
   "version": "0.0.1",
-  "description": "",
+  "description": "Userscript to find npm package in GitHub",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
+    "build": "webpack && cat meta.js ./dist/index.user.js > temp && mv temp ./dist/index.user.js",
     "prettier:check": "prettier --check './**/*.{html,js,svelte,css}'",
     "prettier:write": "prettier --write './**/*.{html,js,svelte,css}'",
     "lint": "eslint './**/*.{js,svelte}'",
