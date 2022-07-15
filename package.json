@@ -19,7 +19,7 @@
     "lint-staged": "^10.2.11",
     "prettier": "^2.0.5",
     "prettier-plugin-svelte": "^1.1.0",
-    "svelte": "^3.24.0",
+    "svelte": "^3.49.0",
     "svelte-loader": "^2.13.6",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12"
